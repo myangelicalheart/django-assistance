@@ -30,7 +30,7 @@ if not SECRET_KEY:
 DEBUG = False #'RENDER' not in os.environ
 
 ALLOWED_HOSTS = ['*','0.0.0.0','horario.up.railway.app','https://horario.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['http://0.0.0.0','https://horario.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['http://0.0.0.0','http://127.0.0.1','https://horario.up.railway.app','https://' + env('SERVER', default='127.0.0.1') ]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:    
